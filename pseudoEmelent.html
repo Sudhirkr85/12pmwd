@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::before {
+        content: "Sudhir";
+      }
+      p::after {
+        content: "Kumar";
+        /* color: aqua; */
+      }
+      p::first-line {
+        font-size: 1.2em;
+      }
+      p::first-letter {
+        font-size: 1.5em;
+      }
+      p::selection {
+        background-color: brown;
+        color: white;
+      }
+      input::placeholder {
+        color: aquamarine;
+      }
+      li::marker{
+        color: blue;
+      }
+
+
+      div{
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+        position: relative;
+       
+      }
+      div::before{
+        position: absolute;
+        content: '';
+        height: 90%;
+        width: 90%;
+       
+        background-color: black;
+      }
+      div::after{
+        right: 0;
+        position: absolute;
+        content: '';
+        height: 50%;
+        width: 50%;
+       
+        background-color: rgb(198, 14, 32);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <ul>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+    <input type="text" placeholder="Name" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quo
+      nesciunt neque excepturi. Modi laudantium placeat voluptate aperiam minus
+      accusantium tenetur sapiente est nobis magnam reiciendis blanditiis, ea
+      dolores magni.
+    </p>
+    <p></p> -->
+
+
+    <div></div>
+  </body>
+</html>
