@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+      }
+      header {
+        background-color: aquamarine;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      header h2 {
+        font-size: 2em;
+        user-select: none;
+      }
+      header nav ul {
+        display: flex;
+        gap: 10px;
+      }
+      header nav ul li {
+        list-style-type: none;
+      }
+      header nav ul li a {
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+      }
+      header .search-box {
+        width: 200px;
+        height: 25px;
+        position: relative;
+      }
+      header .search-box input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 25px;
+      }
+      header .search-box input::placeholder {
+        font-size: 1.2em;
+      }
+      header .search-box i {
+        position: absolute;
+        top: 5px;
+        font-size: 14px;
+        left: 3px;
+        color: rgb(162, 162, 164);
+      }
+      header .fa-bars {
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        header .fa-bars {
+          display: block;
+        }
+        header nav,
+        .search-box {
+          display: none;
+        }
+        header nav ul{
+            /* flex-direction: column; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search..." />
+      </div>
+      <i class="fa-solid fa-bars"></i>
+    </header>
+  </body>
+</html>
