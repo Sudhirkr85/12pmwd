@@ -11,74 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-      }
-      header {
-        background-color: aquamarine;
-        height: 50px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      header h2 {
-        font-size: 2em;
-        user-select: none;
-      }
-      header nav ul {
-        display: flex;
-        gap: 10px;
-      }
-      header nav ul li {
-        list-style-type: none;
-      }
-      header nav ul li a {
-        text-decoration: none;
-        font-weight: 500;
-        color: black;
-      }
-      header .search-box {
-        width: 200px;
-        height: 25px;
-        position: relative;
-      }
-      header .search-box input {
-        height: 100%;
-        width: 100%;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        padding-left: 25px;
-      }
-      header .search-box input::placeholder {
-        font-size: 1.2em;
-      }
-      header .search-box i {
-        position: absolute;
-        top: 5px;
-        font-size: 14px;
-        left: 3px;
-        color: rgb(162, 162, 164);
-      }
-      header .fa-bars {
-        display: none;
-      }
-      @media screen and (max-width: 768px) {
-        header .fa-bars {
-          display: block;
-        }
-        header nav,
-        .search-box {
-          display: none;
-        }
-        header nav ul{
-            /* flex-direction: column; */
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media_query.css" />
+
+    <style></style>
   </head>
   <body>
     <header>
@@ -97,5 +33,33 @@
       </div>
       <i class="fa-solid fa-bars"></i>
     </header>
+
+    <!-- <main>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae nisi,
+        nesciunt minus quaerat cupiditate sequi, atque voluptas libero,
+        accusantium possimus excepturi cum mollitia. Accusantium, tempore iusto
+        aspernatur minus rem similique!
+      </p>
+      <h1>Sudhir</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+        adipisci quisquam omnis sint sunt, nobis maxime ut laudantium inventore
+        atque amet dolores dicta! Vero impedit nemo sit soluta maxime ea.
+      </p>
+    </main> -->
+
+    <script>
+      const navbtn = document.querySelector(".fa-bars");
+      const nav = document.querySelector("nav");
+      navbtn.addEventListener("click", () => {
+        nav.classList.toggle("disable");
+        // if (nav.style.display === "none") {
+        //   nav.style.display = "block";
+        // } else {
+        //   nav.style.display = "none";
+        // }
+      });
+    </script>
   </body>
 </html>
