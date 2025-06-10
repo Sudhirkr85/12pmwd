@@ -4,20 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      body {
+        background-color: #000;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100vh;
+      }
+
+      div {
+        height: 200px;
+        width: 200px;
+        background-color: #222;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 5%;
+        position: relative;
+        overflow: hidden;
+      }
+      div::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 200%;
+        background-image: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #ffea00,
+          #00ff00,
+          #00ffff,
+          #0000ff,
+          #7300ff,
+          #ff00ea
+        );
+        border-radius: 5%;
+        animation: rotate 2s linear infinite;
+      }
+      div::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 90%;
+
+        background-color: #222;
+        border-radius: 5%;
+        /* animation: rotate 2s linear infinite; */
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      h1 {
+        color: #fff;
+        z-index: 100;
+        /* font-size: 10px; */
+      }
+    </style>
   </head>
   <body>
     <div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-        voluptas quidem velit ea adipisci blanditiis perspiciatis porro?
-        Explicabo eveniet cupiditate possimus, neque ipsam non earum magni
-        fugiat aut ullam debitis!
-      </p>
+      <h1>Sudhir</h1>
     </div>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt neque
-      libero eos, ipsa eius blanditiis excepturi nobis fugit, illo facilis
-      sapiente at laborum? Quasi fuga aperiam est sit, laborum nostrum!
-    </p>
   </body>
 </html>
